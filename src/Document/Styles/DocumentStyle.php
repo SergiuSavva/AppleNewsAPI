@@ -64,7 +64,7 @@ class DocumentStyle extends Base {
    * Validates the backgroundColor attribute.
    */
   protected function validateBackgroundColor($value) {
-    if (!$this->isUnitInterval($value)) {
+    if (!$this->isHexColor($value)) {
       $this->triggerError('backgroundColor is not valid');
       return FALSE;
     }
